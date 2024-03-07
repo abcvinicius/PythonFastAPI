@@ -10,35 +10,59 @@ A estrutura do projeto está organizada da seguinte forma:
 fastapi-vue
 ├── services
 │   └── backend
+│       ├── migrations
+│       └── models
 │       ├── Dockerfile
-│       ├── requirements.txt
+│       ├──requirements.txt
 │       └── src
 │           ├── main.py
-│           ├── models.py
-│           ├── routers
-│           │   ├── auth.py
-│           │   └── notes.py
-│           ├── schemas
-│           │   ├── auth.py
-│           │   └── notes.py
-│           └── tests
-│               ├── conftest.py
-│               ├── test_auth.py
-│               └── test_notes.py
+│           ├── auth
+│           │   ├── jwthandler.py
+│           │   └── users.py
+│           ├── crud
+│           │   ├── notes.py
+│           │   └── users.py
+│           ├── database
+│           │   ├── config.py
+│           │   └── models.py
+│           │   └── register.py
+│           ├── routes
+│           │   ├── notes.py
+│           │   └── users.py
+│           └── schemas
+│               ├── notes.py
+│               ├── token.py
+│               └── users.py
 │   └── frontend
 │       ├── Dockerfile
 │       ├── public
 │       ├── src
 │       │   ├── assets
 │       │   ├── components
+│       │   │   ├── HelloWord.vue
+│       │   │   └── NavBar.vue
 │       │   ├── router
-│       │   ├── services
+│       │   │   ├── index.js
 │       │   ├── store
+│       │   │   ├── index.js
+│       │   │   └── modules
+│       │   │       ├── notes.js
+│       │   │       └── users.js
 │       │   ├── views
+│       │   │   ├── AboutView.vue
+│       │   │   ├── DashBoardView.vue
+│       │   │   ├── EditNoteView.vue
+│       │   │   ├── HomeView.vue
+│       │   │   ├── LginView.vue
+│       │   │   ├── NoteView.vue
+│       │   │   ├── ProfileView.vue
+│       │   │   └── RegisterView.vue
+│       │   ├── main.js
 │       │   └── App.vue
 │       ├── babel.config.js
 │       ├── package.json
 │       └── vue.config.js
+└── docker-compose.yml
 ```
 
 ### Backend
