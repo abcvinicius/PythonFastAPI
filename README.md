@@ -11,7 +11,7 @@ fastapi-vue
 ├── services
 │   └── backend
 │       ├── migrations
-│       └── models
+│       │   └── models
 │       ├── Dockerfile
 │       ├──requirements.txt
 │       └── src
